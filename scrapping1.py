@@ -14,13 +14,16 @@ class FileOperationsError(Exception):
 
 def get_page(url1, url2):
     #providing url
-    url = "https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/?ref=feed "
+    url1 = "https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/?ref=feed "
+    url2 = "https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/?ref=feed "
     i = 0
     wordfreq1,wordfreq2 = {},{}
     frequencies = [wordfreq1, wordfreq2]
     urls = [url1, url2]
     semicleantexts = ['semiclean1.txt', 'semiclean2.txt']
+
     while i < len(urls):
+
         try:
             #opening the url for reading
             html = urllib.request.urlopen(urls[i])
@@ -45,7 +48,6 @@ def get_page(url1, url2):
                    for word in re.findall(r'[\w]+', line.lower()):
                        frequencies[i][word] = frequencies[i].setdefault(word, 0) + 1
             frequencies[i] = collections.OrderedDict(sorted(frequencies[i].items()))           
-
         except:
             raise FileOperationsError("file operations(write or read ) faiiled, try again")
 
@@ -54,6 +56,7 @@ def get_page(url1, url2):
     #compare the two dictionaries    
     shared_items = { word: wordfreq1[word] for word in wordfreq1 if word in wordfreq2 and wordfreq1[word] == wordfreq2[word]}
     i =  0
+
     for dictio in frequencies:
         for key,value in dictio:
             print ("Word :"key, " frequencyOfOcurrence :",value)
