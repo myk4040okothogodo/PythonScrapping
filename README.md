@@ -23,10 +23,10 @@
 
 -clone this repository git clone https://github.com/myk4040okothogodo/PythonScrapping.git
 
-run python scrapping1.py
+-run python scrapping1.py
 
-the application will the print the the unique words plus their occurences
-the application will also print the percentage similarity bewteen the pages
+-the application will the print the the unique words plus their occurences
+-the application will also print the percentage similarity bewteen the pages
 
 # Prerequisites
 
@@ -39,7 +39,9 @@ the application will also print the percentage similarity bewteen the pages
 - wheel          0.37.1
 
 
-Usage the project is a demonstatrion of webserver communication using sockets and the rendering of pages Dynamically and statically. With SSL and Jinja2 for rendering html content. You can change the values in the envars.py that holds the variable values to
+# Usage
+The application is used to give an account of all the unique words on a web page , it lists the words in a lexicographically sorted manner, Each word is associated with its frequency of occurence using a dictionary key, value structure.
+The application then compares the words from two different pages and tries to draw simillarity conclusions.
 
 For more examples, please refer to the Documentation
 
@@ -54,7 +56,11 @@ Contributions are what make the open source community such an amazing place to l
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
-Fork the Project Create your Feature Branch (git checkout -b feature/AmazingFeature) Commit your Changes (git commit -m 'Add some AmazingFeature') Push to the Branch (git push origin feature/AmazingFeature) Open a Pull Request (back to top)
+# Fork the Project 
+Create your Feature Branch (git checkout -b feature/AmazingFeature) 
+Commit your Changes (git commit -m 'Add some AmazingFeature') 
+Push to the Branch (git push origin feature/AmazingFeature) 
+Open a Pull Request (back to top)
 
 # License 
 Distributed under the MIT License. See LICENSE.txt for more information.
