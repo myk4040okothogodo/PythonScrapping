@@ -3,7 +3,7 @@
 # Features
 
 - Download of page to locally stored text from url
-- Sorting of the unique words in a page
+- Sorting of the unique words in a page lexicographically
 - Counting the number of occurences words in a page
 - Page comparison
 - Outputs the precantage similarity bewteen different page
