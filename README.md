@@ -25,7 +25,7 @@
 
 -run python scrapping1.py
 
--the application will the print the the unique words plus their occurences
+-the application will the print the the unique words plus their occurences(from hardcorded urls, but one can also supply his or her own 2 urls for comparison)
 -the application will also print the percentage similarity bewteen the pages
 
 # Prerequisites
