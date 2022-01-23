@@ -12,9 +12,10 @@ class FileOperationsError(Exception):
     """ Raise when file operations."""
     pass
 
-def main(url1, url2):
+def get_page(url1, url2):
     #providing url
-    
+    url1 = "https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/?ref=feed "
+    url2 = "https://www.123helpme.com/essay/Florences-Market-in-the-Renaissance-220340 "
     i = 0
     wordfreq1,wordfreq2 = {},{}
     frequencies = [wordfreq1, wordfreq2]
@@ -54,7 +55,7 @@ def main(url1, url2):
 
     #compare the two dictionaries    
     shared_items = { word: wordfreq1[word] for word in wordfreq1 if word in wordfreq2 and wordfreq1[word] == wordfreq2[word]}
-    #i =  0
+    i =  0
 
     for dictio in frequencies:
         for key,value in dictio:
@@ -68,7 +69,4 @@ def main(url1, url2):
     print("The second page share a similarity of :", percentage_similarity2,"%", "with the first page")    
 
 if __name__ == '__main__':
-    url1 = "https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/?ref=feed "
-    url2 = "https://www.123helpme.com/essay/Florences-Market-in-the-Renaissance-220340 " 
-    main(url1, url2)
-    
+    get_page(url1, url2)
