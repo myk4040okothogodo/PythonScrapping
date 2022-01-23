@@ -50,25 +50,25 @@ def main(url1, url2):
         except:
             raise FileOperationsError("file operations(write or read ) faiiled, try again")
 
-
+        i +=1
 
     #compare the two dictionaries    
     shared_items = { word: wordfreq1[word] for word in wordfreq1 if word in wordfreq2 and wordfreq1[word] == wordfreq2[word]}
     #i =  0
 
     for dictio in frequencies:
-        for key,value in dictio:
+        for key,value in dictio.items():
             print ("Word :", key, " frequencyOfOcurrence :",value)
         print("_________________________________________")
     
 
     percentage_similarity = ((len(shared_items))/(len(wordfreq1))*100)
     print("The first page share a similarity of :", percentage_similarity,"%", "with the second page")
-    percentage_similarity2 = ((len(share_items))/(len(wordfreq2))*100)
+    percentage_similarity2 = ((len(shared_items))/(len(wordfreq2))*100)
     print("The second page share a similarity of :", percentage_similarity2,"%", "with the first page")    
 
 if __name__ == '__main__':
     url1 = "https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/?ref=feed "
-    url2 = "https://www.123helpme.com/essay/Florences-Market-in-the-Renaissance-220340 " 
+    url2 = "https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/?ref=feed " 
     main(url1, url2)
     
